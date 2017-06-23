@@ -33,6 +33,15 @@ svg.selectAll("rect")
    .attr("cy", (d)=> yScale(d[1]))
    .attr("r", (d)=> rScale(d[1]));
 
+    // Create X axis
+var xAxis = d3.axisBottom(xScale)
+              // .ticks(5);
+
+svg.append("g")
+               .attr("class","axis")
+               .attr("transform", "translate(0," + (svgHeight - padding) + ")")
+               .call(xAxis);
+
 
 
 	
