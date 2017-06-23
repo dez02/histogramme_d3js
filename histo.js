@@ -42,6 +42,16 @@ svg.append("g")
                .attr("transform", "translate(0," + (svgHeight - padding) + ")")
                .call(xAxis);
 
+//Create Y axis
+var yAxis = d3.axisLeft(yScale)
+                // .ticks(5);
+                console.log(yAxis);
+
+svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + padding + ",0)")
+    .call(yAxis);
+
 
 
 	
